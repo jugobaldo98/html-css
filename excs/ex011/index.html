@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinamicas</h1>
+    <p>Tente abrir esse site em varias dispositivos diferentes ou aumente e diminua o tamanho do navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagens/foto-p.png" type="image/png"> 
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"> 
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture> <!--Tag picture para criar um bloco de comando com tudo que é relacionado a imagens na página0-->
+    <!--source media max width é = se a página for igual ou menor que 1050px de largura, usar a imagem M, pq assim consumiria menos e será mais otimizado-->
+    <!--Mesma coisa para o source media de cima, se for igual ou menor a 750px de largura, usar a imagem P-->
+
+
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir audio em HTML5</p>
+    <audio src="midia/Me Desculpa Jay Z - Baco Exu do Blues - (Cover) Elana Dara.mp3" controls></audio> 
+    <!--Compatível com formatos mp3 wav ogg--> 
+    <!--Não recomendado usar arquivos wav-->
+    <p>Também podemos colocar aúdio com a tag sourcemedia</p>
+    <audio preload="metadata" controls> <!--preload metadata carrega informações do audio como duração etc e controls é o player de audio-->
+        <source src="midia/Me Desculpa Jay Z - Baco Exu do Blues - (Cover) Elana Dara.mp3" controls type="audio/mpeg">
+        <source src="midia/Me Desculpa Jay Z - Baco Exu do Blues - (Cover) Elana Dara.mp3" controls type="audio/wav">
+        <source src="midia/Me Desculpa Jay Z - Baco Exu do Blues - (Cover) Elana Dara.mp3" controls type="audio/ogg">
+
+        <p>Infelizmente seu navegador não pode reproduzir o áudio, <a href="midia/Me Desculpa Jay Z - Baco Exu do Blues - (Cover) Elana Dara.mp3">Clique aqui baixar o arquivo MP3</a></p>
+    </audio>
+</body>
+</html>
